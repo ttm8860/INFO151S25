@@ -1,0 +1,54 @@
+ /* =============
+    Flexbox Demo
+============= */
+@use "../helpers";
+
+
+#flexbox{
+    background-color: #264653;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #flex-child{
+        height: 200px;
+        width: 200px;
+        background-color: #2a9d8f;
+
+        // margin: 0 5vw 5vw 0;
+    }
+
+    ul{
+
+        display: flex;
+        // justify-content: space-between;
+
+
+        li{
+            height: 200px;
+            width: 200px;
+            margin: 0 20px;
+        }
+
+        #b1{
+            background-color: #e9c46a;
+        }
+
+        #b2{
+            background-color: #f4a261;
+            
+        }
+
+        #b3{
+            background-color: #e76f51;
+            // margin-left: auto;
+        }
+
+        #b4{
+            background-color: #2a9d8f;
+        }
+    }
+
+}

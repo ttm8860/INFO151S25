@@ -1,13 +1,218 @@
 /* =============
-    Communication
+    packages
 ============= */
 @use "../helpers";
 
 
-#comms{
-    text-align: center;
+#packages {
+    background-color: var(--lilyWhite);
+    padding: 100px 24px;
 
-    p{
-        margin: 24px 0px 48px;
+
+    #top-content{
+        text-align: center;
+
+        @include helpers.md{
+            display: flex;
+            align-items: center;
+        }
+
+        @include helpers.lg{
+            margin-bottom: 70px;
+        }
+
+        @include helpers.xl{
+            width: 1200px;
+            margin: 0 auto 70px;
+        }
+
+        #package-button-container{
+            background-color: var(--white);
+            margin: 24px 0;
+            padding: 8px;
+            border-radius: 10px;
+            // week 4 code
+            display: inline-block;
+
+            @include helpers.md{
+                margin-left: auto;
+            }
+    
+            button{
+                border: none;
+            }
+    
+            #left-arrow{
+                background-color: var(--white);
+                color: var(--grey);
+                padding: 13px 18px;
+            }
+    
+            #right-arrow{
+                background-color: var(--aqua);
+                color: var(--white);
+                padding: 13px 18px;
+                border-radius: 8px;
+            }
+        }
+    }
+    
+
+    #package-card-container{
+
+        @include helpers.md{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:    "card-1 card-1 card-2 card-2"
+                                    "...    card-3 card-3 ...";
+        }
+
+        @include helpers.xl{
+            max-width: 1200px;
+            margin: 0 auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "card-1 card-2 card-3";
+            gap: 45px;
+
+        }
+
+
+        .package-card{
+            background-color: var(--ghost);
+            border: 1px solid var(--white);
+            margin-bottom: 48px;
+            padding: 16px;
+            border-radius: 14px;
+
+            .package-card-img{
+                width: 100%;
+                height: 273px;
+                background-position: center;
+                background-size: cover;
+                border-radius: 14px;
+            }
+
+            p{
+                color: var(--nightBlue);
+                font-weight: 600;
+                font-size: helpers.rem-calc(20);
+                line-height: helpers.rem-calc(28);
+                margin: 20px 0 16px;
+            }
+
+            .package-status-bar{
+                display: flex;
+                align-items: center;
+
+                .user-icons{
+                    display: flex;
+                    align-items: center;
+    
+                    li{
+                        height: 36px;
+                        width: 36px;
+                        border: 1px solid var(--white);
+                        border-radius: 100%;
+                        margin-right: -15px;
+                    }
+                }
+
+                h4{
+                    color: var(--grey);
+                    font-size: helpers.rem-calc(14);
+                    line-height: helpers.rem-calc(28);
+                    font-weight: 600;
+                    margin-left: 20px;
+                    
+                }
+    
+                h3{
+                    color: var(--aqua);
+                    font-weight: 600;
+                    font-size: helpers.rem-calc(14);
+                    line-height: helpers.rem-calc(28);
+                    margin-left: auto;
+                    
+                }
+            }
+
+        
+            
+        }
+
+        .selected{
+            background-color: var(--white);
+        }
+
+        #card-1{
+            @include helpers.md{
+                grid-area: card-1;
+            }
+
+            .package-card-img{
+                background-image: url("../img/packages/card-1.jpg")
+            }
+
+            .icon-1{
+                background-image: url("../img/packages/user-1.jpg");
+            }
+
+            .icon-2{
+                background-image: url("../img/packages/user-3.jpg");
+                background-position: 80% 80%;
+            }
+
+            .icon-3{
+                background-image: url("../img/packages/user-2.jpg");
+            }
+        }
+
+        #card-2{
+            @include helpers.md{
+                grid-area: card-2;
+            }
+
+            .package-card-img{
+                background-image: url("../img/packages/card-3.jpg")
+            }
+
+            .icon-1{
+                background-image: url("../img/packages/user-5.jpg");
+                background-position: center 30%;
+            }
+
+            .icon-2{
+                background-image: url("../img/packages/user-3.jpg");
+                background-position: 80% 80%;
+            }
+
+            .icon-3{
+                background-image: url("../img/packages/user-4.jpg");
+            }
+        }
+
+        #card-3{
+            @include helpers.md{
+                grid-area: card-3;
+            }
+
+            .package-card-img{
+                background-image: url("../img/packages/card-2.jpg")
+            }
+
+            .icon-1{
+                background-image: url("../img/packages/user-5.jpg");
+                background-position: center 30%;
+            }
+
+            .icon-2{
+                background-image: url("../img/packages/user-3.jpg");
+                background-position: 80% 80%;
+            }
+
+            .icon-3{
+                background-image: url("../img/packages/user-4.jpg");
+            }
+        }
     }
 }
