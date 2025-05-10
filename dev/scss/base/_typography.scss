@@ -1,0 +1,30 @@
+/* =============
+    Typography
+============= */
+@use "../helpers";
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+.section-title{
+    color: var(--nightBlue);
+    font-size: helpers.rem-calc(50);
+    line-height: helpers.rem-calc(65);
+}
+
+.body-grey-text{
+    // line-height: 28px;
+    line-height: helpers.rem-calc(28);
+    color: var(--grey);
+    font-weight: 600;
+}
+
+// .open-sans-<uniquifier> {
+//     font-family: "Open Sans", sans-serif;
+//     font-optical-sizing: auto;
+//     font-weight: <weight>;
+//     font-style: normal;
+//     font-variation-settings:
+//       "wdth" 100;
+//   }

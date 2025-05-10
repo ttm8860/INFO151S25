@@ -1,0 +1,48 @@
+/* =============
+    Newsletter
+============= */
+@use "../helpers";
+
+#newsletter{
+
+    #newsletter-content{
+        background-color: var(--lilyWhite);
+        padding: 60px 16px;
+
+        p{
+            margin: 16px 0;
+        }
+    
+        form{
+    
+            input{
+                border: none;
+                color: var(--grey);
+                font-weight: 600;
+                width: 100%;
+                padding: 24px 8px;
+                box-sizing: border-box;
+                border-radius: 8px;
+                margin-bottom: 16px;
+            }
+
+            ::placeholder {
+                color: var(--grey);
+                opacity: 1; /* Firefox */
+            }
+            
+            ::-ms-input-placeholder { /* Edge 12 -18 */
+                color: var(--grey);
+            }
+
+            div{
+                text-align: right;
+            }
+        }
+
+        aside{
+            // week 4 code
+            display: none;
+        }
+    }
+}
