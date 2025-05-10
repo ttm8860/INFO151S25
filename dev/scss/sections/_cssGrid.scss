@@ -1,0 +1,73 @@
+/* =============
+    CSS Grid Demo
+============= */
+@use "../helpers";
+
+#cssGrid{
+    height: 100vh;
+    background-color: var(--black);
+
+    ul{
+        display: grid;
+        // grid-template-columns: 200px 200px 200px 200px;
+        // grid-template-columns: repeat(4, 300px);
+        // grid-template-columns: repeat(3, 1fr);
+        // grid-template-columns: 25% 25% 50%;
+        // grid-template-rows: 25vh 50vh; 
+        // grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 30vh);
+        background-color: var(--white);
+        grid-template-areas: "b3 b1"
+                             "b4 b2";
+        // grid-template-areas: "box1 box2"
+        // height: 100%;
+
+        @include helpers.md {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "b3 b1 b1 b2"
+                                 "b3 b4 b4 b2";
+        }
+
+        @include helpers.xl {
+            grid-template-areas: "b3 b4 b1 b2"
+                                 "b3 b4 b1 b2";
+
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        li{
+            // height: 200px;
+            // width: 200px;
+            // height: 30vh;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
+        #orange{
+            background-color: #fb8500;
+            grid-area: b1;
+        }
+
+        #pink{
+            background-color: #f72585;
+            grid-area: b2;
+        } 
+
+        #green{
+            background-color: #a7c957;
+            grid-area: b4;
+        }
+
+        #blue{
+            background-color: #00b4d8;
+            grid-area: b3;
+        }
+    }
+}
