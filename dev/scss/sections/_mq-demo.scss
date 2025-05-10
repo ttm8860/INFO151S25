@@ -1,0 +1,46 @@
+/* =============
+    mq demo
+============= */
+@use "../helpers";
+
+
+#mq-demo{
+    height: 100vh;
+    background-color: var(--white);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div{
+        height: 200px;
+        width: 200px;
+        background-color: var(--aqua);
+
+        @include helpers.md{
+            height: 250px;
+            width: 250px;
+            background-color: orangered;
+        }
+
+        @include helpers.lg{
+            width: 400px;
+            background-color: purple;
+        }
+    }
+
+    h1{
+        font-size: helpers.rem-calc(20);
+        font-weight: 400;
+
+        @include helpers.md{
+            font-size: helpers.rem-calc(40);
+        }
+
+        @include helpers.xxl{
+            font-size: helpers.rem-calc(80);
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+/* =============
+    About
+============= */
+@use "../helpers";
+
+#about{
+    padding: 40px 24px;
+
+    section{
+        .about-p{
+            margin: 24px 0 40px;
+        }
+    
+        ul{
+            li{
+                h2{
+                    color: var(--nightBlue);
+                    font-size: helpers.rem-calc(20);
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    aside{
+        margin-top: 68px;
+    }
+
+   
+}

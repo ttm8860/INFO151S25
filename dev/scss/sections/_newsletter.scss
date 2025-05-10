@@ -1,0 +1,87 @@
+/* =============
+    Newsletter
+============= */
+@use "../helpers";
+
+#newsletter{
+
+    margin-bottom: 100px;
+
+    #newsletter-content{
+        background-color: var(--lilyWhite);
+        padding: 60px 16px;
+
+        @include helpers.md{
+            padding: 60px 20vw;
+        }
+
+        @include helpers.lg{
+            display: grid;
+            grid-template-columns: 60% auto;
+            padding: 0px 0px;
+            gap: 60px;
+        }
+
+        @include helpers.xl{
+            grid-template-columns: 65% auto;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #newsletter-left{
+
+            @include helpers.lg{
+                padding: 60px 0px 60px 60px;
+            }
+
+            p{
+                margin: 16px 0;
+            }
+        
+            form{
+        
+                input{
+                    border: none;
+                    color: var(--grey);
+                    font-weight: 600;
+                    width: 100%;
+                    padding: 24px 8px;
+                    box-sizing: border-box;
+                    border-radius: 8px;
+                    margin-bottom: 16px;
+                }
+    
+                ::placeholder {
+                    color: var(--grey);
+                    opacity: 1; /* Firefox */
+                }
+                
+                ::-ms-input-placeholder { /* Edge 12 -18 */
+                    color: var(--grey);
+                }
+    
+                div{
+                    text-align: right;
+                }
+            }
+        }
+
+
+
+        aside{
+            // week 4 code
+            display: none;
+
+            @include helpers.lg{
+                display: block;
+                // border: 1px solid red;
+                margin-top: -50px;
+            }
+
+            img{
+                 margin-top: -120px;
+                object-fit: cover;
+            }
+        }
+    }
+}
